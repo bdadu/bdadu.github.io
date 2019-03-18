@@ -61,9 +61,12 @@ function hideAllPage(){
 function showSkills(){
     var skills=['html','css','js'];
     for( var i=0; i<skills.length; i++){
-        console.log(i+1+'.' +skills[i]);
+        printSkill(skills[i],i)
     }
-    skills.forEach();
+    function printSkill(skill, index){
+        console.info("#" + (index+1)+" " +skill);
+    }
+   
 }
 showSkills();
 

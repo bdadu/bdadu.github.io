@@ -61,10 +61,10 @@ function hideAllPage(){
 function showSkills(){
     var skills=['html','css','js'];
     
-    skills.forEach(printSkill);
-    function printSkill(skill, index){
+    skills.forEach(function(skill, index){
         console.info("#" + (index+1)+" " +skill);
-    }
+    });
+    
    
 }
 showSkills();

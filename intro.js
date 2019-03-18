@@ -63,6 +63,7 @@ function showSkills(){
     for( var i=0; i<skills.length; i++){
         console.log(i+1+'.' +skills[i]);
     }
+    skills.forEach();
 }
 showSkills();
 

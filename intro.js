@@ -61,12 +61,27 @@ function hideAllPages(){
 }
 
 function showSkills(){
-    var allEndorsements=[8, 12, 19, 3];
-    var skills=['html','css','js','nodeJS'];
+    
+
+    var skills=[
+        {name:'js', endorsement:20, endorsedBy:'Andrei'},
+        {name:'html', endorsement: 8},
+        {name:'css', endorsement:12, endorsedBy:'Bill Gates'},
+        {name:'nodeJS', endorsement:3}
+    ]; 
+    
+    
     
     var htmlSkills = skills.map(function(skill, index){
-        var endorsements= '<span class="endorcements"> (' + allEndorsements[index] + ')</span>';
-        return "<li>" + skill.toUpperCase() + endorsements +  "</li>";
+        var endorsedBy=skill.endorsedBy;
+        if (endorsedBy){
+            endorsedBy='-'+endorsedBy;
+            
+        } else{
+            endorsedBy='';
+        }
+        var endorsements= `<span class="endorcements"> (${skill.endorsement})+(${endorsedBy})</span>`;
+        return "<li>" + skill.name.toUpperCase() + endorsements +  "</li>";
     });
 
     var ul = document.querySelector("#skills-page ul");

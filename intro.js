@@ -70,7 +70,10 @@ function showSkills(){
         {name:'nodeJS', endorsement:3}
     ]; 
     
-    
+    skills.sort(function(a, b){
+        return b.endorsement - a.endorsement;
+
+    });
     
     var htmlSkills = skills.map(function(skill, index){
         var endorsedBy=skill.endorsedBy? '-' + skill.endorsedBy:'';
